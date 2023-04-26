@@ -41,12 +41,19 @@ const genresToString = (arr) => {
   return arr.map((obj) => obj.genre).join(", ");
 };
 
-let currentTitle = 1;
+let currentTitle = 0;
 $("#btnright").on("click", function () {
-  getKinoData(kdramalist[currentTitle]);
   if (kdramalist.length >= currentTitle) {
     currentTitle++;
   }
+  getKinoData(kdramalist[currentTitle]);
+});
+
+$("#btnleft").on("click", function () {
+  if (currentTitle > 0) {
+    currentTitle--;
+  }
+  getKinoData(kdramalist[currentTitle]);
 });
 
 getKinoData(kdramalist[0]);
