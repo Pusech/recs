@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -21,7 +22,7 @@ body {
   width: 640px; /* Can be in percentage also. */
   height: auto;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 0; /* 2rem 0; */
   position: relative;
   /* margin-top: 10%; */
   /* padding: 10% 30%; */
@@ -30,12 +31,15 @@ body {
 .mainblock {
   margin-top: 5rem;
   display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .posterimg {
+  height: 350px;
   max-width: 100%;
-  max-height: 100%;
-  min-width: 60%;
+  max-height: 80%;
+  min-width: 50%;
   object-fit: contain;
 }
 
@@ -59,4 +63,50 @@ body {
   .mainblock {
     margin-top: 0;
   }
+}
+
+.btn {
+  border: 0;
+  background-color: none;
+  z-index: 3;
+  position: absolute;
+  opacity: 0;
+}
+#btnright {
+  height: 100%;
+  width: 50%;
+  transform: translate(12rem);
+}
+
+#btnleft {
+  height: 100%;
+  width: 50%;
+}
+
+#titleName {
+  padding: 0;
+  margin: 0;
+}
+
+#titleGenre {
+  padding: 0;
+  margin: 0;
+}
+
+#titleYear {
+  padding: 0;
+  margin: 0;
+}
+
+#titleRating {
+  padding: 0;
+  margin: 0;
+}
+
+#titleDescription {
+  padding: 0 1rem;
+}
+
+#titleWebsite {
+  color: black;
 }

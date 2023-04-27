@@ -32,7 +32,10 @@ const getKinoData = (id) => {
       $("#titleYear").text(json.startYear);
       $("#titleName").text(json.nameRu);
       $("#titleGenre").text(genresToString(json.genres));
-      $("#titleRating").text("Оценка: " + json.ratingImdb);
+      $("#titleRating").text("Рейтинг сериала: " + json.ratingImdb);
+      $("#titleWebsite").attr("href", json.webUrl);
+      console.log(json);
+      //webUrl
     })
     .catch((err) => console.log(err));
 };
@@ -57,3 +60,8 @@ $("#btnleft").on("click", function () {
 });
 
 getKinoData(kdramalist[0]);
+
+for (let i = 0; i < kdramalist.length; i++) {
+  $("#titleDescription").after();
+  console.log("https://www.kinopoisk.ru/series/" + kdramalist[i]);
+}
